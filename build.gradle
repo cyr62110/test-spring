@@ -1,8 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'jetty'
-
-//these create the 'provided' scope, mainly for the servlet dependency
+apply plugin: 'jettymulti'
 apply plugin: 'propdeps'
 
 buildscript {
@@ -16,7 +14,12 @@ buildscript {
 
     dependencies {
         classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.1'
+        classpath group: 'com.github.martins1930.gradle', name: 'JettyMulti', version: '1.2.0-RELEASE'
     }
+}
+
+jettyMulti {
+    jMPort = 8080
 }
 
 repositories {
