@@ -12,4 +12,6 @@
 
     <context:component-scan base-package="test.spring.controllers" />
 
+    <beans:import resource="mvc-view-config.xml" />
+
 </beans:beans>
