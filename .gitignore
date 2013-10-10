@@ -1,5 +1,11 @@
 *.class
 
+#Gradle
+build
+.gradle
+.idea/workspace.xml
+.idea/libraries/*.xml
+
 # Package Files #
 *.jar
 *.war
