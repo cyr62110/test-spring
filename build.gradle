@@ -25,11 +25,17 @@ jettyMulti {
 repositories {
     mavenCentral()
     maven { url 'http://repo.spring.io/milestone/'}
+    maven { url 'http://m2.neo4j.org/' }
 }
 
 dependencies {
     compile 'org.springframework:spring-core:3.2.3.RELEASE'
     compile 'org.springframework:spring-webmvc:3.2.3.RELEASE'
+
+    //We add SpingData Neo4J
+    compile group: 'org.springframework.data', name: 'spring-data-neo4j-rest', version: '2.3.1.RELEASE'
+    runtime group: 'javax.validation', name: 'validation-api', version: '1.1.0.Final'
+    runtime group: 'org.hibernate', name: 'hibernate-validator', version: '5.0.1.Final'
 
     provided 'javax.servlet:javax.servlet-api:3.0.1'
 
