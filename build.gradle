@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'jetty'
 
 //these create the 'provided' scope, mainly for the servlet dependency

@@ -1,12 +1,7 @@
 *.class
 
 #Gradle
-build
-.gradle
-.idea/workspace.xml
-.idea/libraries/*.xml
-
-# Package Files #
-*.jar
-*.war
-*.ear
+/build
+/\.idea/workspace.xml
+/\.idea/libraries/*.xml
+/\.gradle
