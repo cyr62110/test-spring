@@ -1,44 +1,32 @@
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'jettymulti'
-apply plugin: 'propdeps'
-
 buildscript {
     repositories {
-        mavenCentral()
-        maven {
-            url "http://download.java.net/maven/2"
-        }
-        maven { url 'http://repo.spring.io/plugins-release' }
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
     }
-
     dependencies {
-        classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.1'
-        classpath group: 'com.github.martins1930.gradle', name: 'JettyMulti', version: '1.2.0-RELEASE'
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M4")
     }
 }
 
-jettyMulti {
-    jMPort = 8080
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
 }
 
 repositories {
     mavenCentral()
-    maven { url 'http://repo.spring.io/milestone/'}
+    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
-    compile 'org.springframework:spring-core:3.2.3.RELEASE'
-    compile 'org.springframework:spring-webmvc:3.2.3.RELEASE'
-
-    provided 'javax.servlet:javax.servlet-api:3.0.1'
-
-    runtime 'com.fasterxml.jackson.core:jackson-core:2.2.2'
-    runtime 'com.fasterxml.jackson.core:jackson-databind:2.2.2'
-    runtime 'javax.xml.bind:jaxb-api:2.2.9'
-
-    compile 'org.slf4j:slf4j-api:1.7.5'
-    runtime 'org.slf4j:slf4j-jdk14:1.7.5'
+    compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M4")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    testCompile("junit:junit:4.11")
 }
 
 task wrapper(type: Wrapper) {
