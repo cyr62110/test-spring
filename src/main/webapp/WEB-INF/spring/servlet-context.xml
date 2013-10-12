@@ -10,7 +10,7 @@
     <!-- Enables the Spring MVC @Controller programming model -->
     <annotation-driven />
 
-    <context:component-scan base-package="test.spring.controllers" />
+    <context:component-scan base-package="test.spring.web.controllers" />
 
     <beans:import resource="mvc-view-config.xml" />
 

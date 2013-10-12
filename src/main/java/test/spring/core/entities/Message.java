@@ -1,4 +1,4 @@
-package test.spring.entities;
+package test.spring.core.entities;
 
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
@@ -10,6 +10,8 @@ public class Message {
 
     @GraphId
     private Long id;
+
+    private String email;
 
     private Date date;
 
@@ -32,6 +34,14 @@ public class Message {
         this.id = id;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public Date getDate() {
         return date;
     }
@@ -50,7 +60,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "WebMessage{" +
                 "date=" + date +
                 ", message='" + message + '\'' +
                 '}';

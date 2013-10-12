@@ -11,6 +11,6 @@
         <constructor-arg index="0" value="http://localhost:7474/db/data" />
     </bean>
 
-    <neo4j:repositories base-package="test.spring.repositories" />
+    <neo4j:repositories base-package="test.spring.core.repositories" />
 
 </beans>

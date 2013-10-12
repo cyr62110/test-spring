@@ -22,6 +22,10 @@ jettyMulti {
     jMPort = 8080
 }
 
+test {
+    useTestNG()
+}
+
 repositories {
     mavenCentral()
     maven { url 'http://repo.spring.io/milestone/'}
@@ -31,6 +35,7 @@ repositories {
 dependencies {
     compile 'org.springframework:spring-core:3.2.3.RELEASE'
     compile 'org.springframework:spring-webmvc:3.2.3.RELEASE'
+    compile 'org.springframework:spring-test:3.2.3.RELEASE'
 
     //We add SpingData Neo4J
     compile group: 'org.springframework.data', name: 'spring-data-neo4j-rest', version: '2.3.1.RELEASE'
@@ -47,6 +52,9 @@ dependencies {
 
     compile 'org.slf4j:slf4j-api:1.7.5'
     runtime 'org.slf4j:slf4j-jdk14:1.7.5'
+
+    testCompile group: 'org.testng', name: 'testng', version: '6.8.7'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
 }
 
 task wrapper(type: Wrapper) {
