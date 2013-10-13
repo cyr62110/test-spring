@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:neo4j="http://www.springframework.org/schema/data/neo4j"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/data/neo4j http://www.springframework.org/schema/data/neo4j/spring-neo4j-2.0.xsd">
+
+    <neo4j:config graphDatabaseService="graphDatabaseService"/>
+    <bean id="graphDatabaseService"
+          class="org.springframework.data.neo4j.rest.SpringRestGraphDatabase">
+        <!-- DEV
+         <constructor-arg index="0" value="http://localhost:7474/db/data" /> -->
+        <!-- PROD -->
+        <constructor-arg index="0" value="http://e43e99a81.hosted.neo4j.org:7636/db/data/" />
+        <constructor-arg index="1" value="dd6136423" />
+        <constructor-arg index="2" value="f2c3b852f" />
+    </bean>
+
+    <neo4j:repositories base-package="test.spring.core.repositories" />
 
 </beans>
