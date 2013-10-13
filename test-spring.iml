@@ -79,6 +79,32 @@
     <orderEntry type="library" scope="TEST" name="hamcrest-core-1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="jcommander-1.27" level="project" />
     <orderEntry type="library" exported="" name="spring-test-3.2.3.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="javax.annotation-1.1.0.v201108011116" level="project" />
+    <orderEntry type="library" exported="" name="jetty-jsp-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet.jsp-2.2.0.v201112011158" level="project" />
+    <orderEntry type="library" exported="" name="jetty-security-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-jndi-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-annotations-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet-3.0.0.v201112011016" level="project" />
+    <orderEntry type="library" exported="" name="javax.activation-1.1.0.v201105071233" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet.jsp.jstl-1.2.0.v201105211821" level="project" />
+    <orderEntry type="library" exported="" name="org.objectweb.asm-3.1.0.v200803061910" level="project" />
+    <orderEntry type="library" exported="" name="javax.transaction-1.1.1.v201105210645" level="project" />
+    <orderEntry type="library" exported="" name="jetty-server-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-servlet-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-io-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="org.eclipse.jdt.core-3.7.1" level="project" />
+    <orderEntry type="library" exported="" name="jetty-http-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-continuation-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="javax.el-2.2.0.v201108011116" level="project" />
+    <orderEntry type="library" exported="" name="com.sun.el-2.2.0.v201108011116" level="project" />
+    <orderEntry type="library" exported="" name="jetty-plus-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-webapp-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-xml-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="jetty-util-8.1.7.v20120910" level="project" />
+    <orderEntry type="library" exported="" name="javax.mail.glassfish-1.4.1.v201005082020" level="project" />
+    <orderEntry type="library" exported="" name="org.apache.jasper.glassfish-2.2.2.v201112011158" level="project" />
+    <orderEntry type="library" exported="" name="jetty-runner-8.1.7.v20120910" level="project" />
   </component>
 </module>
 

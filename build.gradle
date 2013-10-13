@@ -1,7 +1,10 @@
+apply plugin:'application'
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'jettymulti'
 apply plugin: 'propdeps'
+
+mainClassName = 'test.spring.Main'
 
 buildscript {
     repositories {
@@ -41,6 +44,9 @@ dependencies {
     compile group: 'org.springframework.data', name: 'spring-data-neo4j-rest', version: '2.3.1.RELEASE'
     runtime group: 'javax.validation', name: 'validation-api', version: '1.1.0.Final'
     runtime group: 'org.hibernate', name: 'hibernate-validator', version: '5.0.1.Final'
+
+    //We need jetty-runner to launch our app on heroku
+    compile group: 'org.mortbay.jetty', name: 'jetty-runner', version: '8.1.7.v20120910'
 
     compile 'org.thymeleaf:thymeleaf-spring3:2.0.18'
 
