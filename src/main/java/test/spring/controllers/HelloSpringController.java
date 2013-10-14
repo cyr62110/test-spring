@@ -27,6 +27,7 @@ public class HelloSpringController {
     {
         Message message = new Message("mon message");
         messageRepository.save(message);
+
         return message.toString();
 
     }
